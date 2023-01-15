@@ -10,17 +10,23 @@ const ingredients = [
 const elemUl = document.getElementById('ingredients');
 console.log(elemUl);
 
-for ( const ingredient of ingredients){
-  const elemLi = document.createElement('li');
-  elemLi.classList.add('item');
-  elemLi.textContent = ingredient;
-  elemUl.appendChild(elemLi);
- };
+const hasElemLi = ingredients => {
+  return ingredients.map(ingredient => {
+    const elemLi = document.createElement('li');
+    elemLi.classList.add('item');
+    elemLi.textContent = ingredient;
+    return elemLi;
+  })
+};
+ 
 
 
+const liElem = hasElemLi(ingredients);
+ elemUl.append(... liElem);
 
 
   
+
 
 
 

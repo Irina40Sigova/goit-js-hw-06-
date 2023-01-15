@@ -4,9 +4,14 @@ console.log("Number of categories:", liElem.length);
 
 
 const getEachLi = liElem.forEach(elem =>{
-    console.log( "Category:" , elem.firstElementChild.textContent);
-    console.log( "Elements:" , elem.querySelectorAll('li').length);
+    const elemTitle = elem.firstElementChild.textContent;
+    console.log( "Category:" , elemTitle);
+    const elemItem = elem.lastElementChild.children;
+    console.log( "Elements:" , elemItem.length);
 });
+
+
+
 
 
 
